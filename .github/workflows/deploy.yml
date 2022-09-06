@@ -29,5 +29,5 @@ jobs:
           fail_on_empty: false
       - name: Install Dependencies
         run: npm i
-      - name: Run Server go!
+      - name: Run Server go
         run: npm run start

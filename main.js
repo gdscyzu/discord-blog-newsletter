@@ -23,20 +23,17 @@ client.once("ready", (c) => {
   // logged out if no News aka. we have no new post yesterday.
   const yesterday = new Date();
   const firstDate = new Date(data[0].date);
-//   if (
-//     firstDate.getDate() != yesterday.getDate() ||
-//     firstDate.getMonth() != yesterday.getMonth() ||
-//     firstDate.getFullYear() != yesterday.getFullYear()
-//   ) {
-//     console.log("No Avilable News");
-//     process.exit();
-//   }
+  if (
+    firstDate.getDate() != yesterday.getDate() ||
+    firstDate.getMonth() != yesterday.getMonth() ||
+    firstDate.getFullYear() != yesterday.getFullYear()
+  ) {
+    console.log("No Avilable News");
+    process.exit();
+  }
 
   // edit-channel-id
   let channel = client.channels.cache.get("834803077131010078");
-  channel.send('hello!').then(() => {
-    client.destroy();
-  });
   let returnData = String();
   returnData += "> **NewsLetter :**\n";
   for (let i = 0; i < 3 && i < data.length; i++) {

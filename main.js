@@ -9,7 +9,7 @@ const token = process.env.SECRET_KEY;
 let data = [];
 
 // edit-api // hi
-fetch("https://www.ryankert.cc/rss-friend/sorted.json")
+fetch("https://gdscyzu.github.io/rss-friend/sorted.json")
   .then((res) => res.json())
   .then((json) => {
     data = json;

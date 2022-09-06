@@ -8,7 +8,7 @@ const token = process.env.SECRET_KEY;
 
 let data = [];
 
-// edit-api
+// edit-api // hi
 fetch("https://www.ryankert.cc/rss-friend/sorted.json")
   .then((res) => res.json())
   .then((json) => {
